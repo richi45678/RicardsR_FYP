@@ -1,0 +1,14 @@
+Source tree: PHP files in this folder are edited here, then copied to the live site.
+
+Live Apache docroot: /var/www/html/
+
+Deploy everything at once (from this directory):
+  chmod +x deploy.sh
+  ./deploy.sh
+
+That copies: index.php, assets/dashboard.css, assets/dashboard.js, esp_capture_lib.php,
+list_uploads.php, delete_photos.php, upload.php, plant AI + sensor + pump/tank PHP, and camera_config.php.
+
+index.php is slim (~620 lines); styles and client logic live under assets/.
+
+Runtime data on the server (not in git): uploads/, uploads/meta/, data/ (keys, sensors, pump flags).
